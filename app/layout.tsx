@@ -1,18 +1,19 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
-import localFont from "next/font/local";
+import { Geist, Geist_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-// Load local Geist fonts from the public folder
-const GeistSans = localFont({
-  src: "/fonts/Geist-Regular.woff2",
+const GeistSans = Geist({
+  subsets: ["latin"],
   variable: "--font-geist-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const GeistMono = localFont({
-  src: "/fonts/Geist-Mono.woff2",
+const GeistMono = Geist_Mono({
+  subsets: ["latin"],
   variable: "--font-geist-mono",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
