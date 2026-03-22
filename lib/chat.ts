@@ -1,4 +1,5 @@
-import { ChatCompletionRequestMessage } from "openai";
+// ❌ Remove the incorrect OpenAI import
+// import { ChatCompletionRequestMessage } from "openai";
 
 export interface ChatMessage {
   role: "user" | "assistant";
@@ -16,7 +17,6 @@ export async function getCoachResponse(
   messages: ChatMessage[],
   habit: HabitContext | null
 ) {
-
   const last = messages[messages.length - 1].content;
 
   // Custom CatCoach personality
@@ -50,9 +50,7 @@ User says: "${last}"
 Respond as CatCoach:
 `;
 
-  // If you want: connect to OpenAI here
-  // For now, return a handcrafted response:
-
+  // For now, return handcrafted response
   if (last.toLowerCase().includes("read")) {
     return `mrrp~ okay, tiny step time 📘  
 Instead of “read 20 min”, just open the book and read **one page**.  
