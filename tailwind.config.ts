@@ -1,12 +1,18 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["class"],
   content: [
     "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}"
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}" // REQUIRED for shadcn utils
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
+      },
       colors: {
         mindgym: {
           bg: "#050814",

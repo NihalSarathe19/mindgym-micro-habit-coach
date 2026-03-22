@@ -11,6 +11,7 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.0",
+    "geist": "^1.7.0",
     "lucide-react": "^0.378.0",
     "next": "14.1.0",
     "openai": "4.28.0",
@@ -23,7 +24,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
-    "@types/node": "20.11.19",
+    "@types/node": "^20.11.19",
     "@types/react": "18.2.57",
     "@types/react-dom": "18.2.19",
     "autoprefixer": "10.4.17",
